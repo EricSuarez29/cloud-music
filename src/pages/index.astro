@@ -1,0 +1,132 @@
+---
+import Default from "../layouts/Default.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Default>
+	<main class="bg-gray-700 min-h-[100vh] relative">
+		<nav class="absolute top-0 left-0 w-full">
+			<div class="container mx-auto flex justify-between py-3">
+				<span class="text-gray-300 text-2xl">CloudMusic</span>
+				<div class="flex gap-3">
+					<button
+						class="text-white border-2 border-gray-300 px-8 py-2 rounded-full"
+						>Iniciar Sesión</button
+					>
+					<button
+						class="text-white bg-indigo-500 px-8 py-2 rounded-full hover:bg-indigo-600 transition-colors"
+						>Crear Cuenta</button
+					>
+				</div>
+			</div>
+		</nav>
+		<section class="bg-gray-800">
+			<div
+				class="container h-[60vh] mx-auto flex items-stretch justify-between"
+			>
+				<div class="w-1/2 flex flex-col justify-center items-start">
+					<h1 class="text-5xl text-indigo-500 font-extrabold mb-4">
+						Conectar en CloudMusic
+					</h1>
+					<p class="text-xl mb-7 text-gray-200">
+						Descubre, escucha y comparte un catálogo de música que
+						no deja de crecer con artistas emergentes y consolidados
+						de todo el mundo.
+					</p>
+					<button
+						class="text-white bg-indigo-500 px-8 py-3 rounded-full hover:bg-indigo-600 transition-colors"
+						>Registrarse Gratis</button
+					>
+				</div>
+				<div class="w-1/3 flex items-end">
+					<img
+						src="https://th.bing.com/th/id/R.977d7222fa58ab37e66471785569af3a?rik=vVAukp85UPg2lA&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f13%2fBillie-Eilish-PNG-Background-Image.png&ehk=0Tx%2f6PI7o8jKdupRoJNtqo2vlz5VH6iT0JqHaSwSpiw%3d&risl=&pid=ImgRaw&r=0"
+						alt=""
+						class="w-100 drop-shadow-lg shadow-indigo-500"
+					/>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-10">
+			<header class="text-center py-10">
+				<h2 class="text-gray-200 text-2xl font-thin">
+					Escucha la música del momento gratis en la comunidad de
+					CloudMusic
+				</h2>
+			</header>
+			<div class="container mx-auto grid grid-cols-5 gap-4 pb-10">
+				{
+					Array.from({ length: 10 }, (v, i) => i).map((item) => (
+						<div>
+							<img
+								src="https://t2.genius.com/unsafe/600x600/https://images.genius.com/fe6fe68ebeeed30dbe5fd776454a4b79.1000x1000x1.png"
+								alt=""
+								class="h-[300px] col-span-4"
+							/>
+							<div class="py-3">
+								<p class="text-gray-300 font-thin text-xl">
+									11 y Once
+								</p>
+								<p class="text-gray-400">
+									Tainy, Sech y Yandel
+								</p>
+							</div>
+						</div>
+					))
+				}
+			</div>
+			<div class="text-center">
+				<button
+					class="text-white bg-indigo-500 px-10 py-3 rounded-full hover:bg-indigo-600 transition-colors"
+					>Ver Más</button
+				>
+			</div>
+		</section>
+		<section class="py-10">
+			<div class="container mx-auto py-10 flex">
+				<div
+					class="bg-gray-800 p-10 rounded-xl flex items-center justify-between"
+				>
+					<div class="w-5/12">
+						<p class="text-3xl text-gray-300 mb-2">
+							Escucha a tus artistas favoritos
+						</p>
+						<p class="text-xl text-gray-400 mb-5">
+							Hazte con SoundCloud para estar en contacto con tus
+							seguidores, compartir tus canciones y aumentar tu
+							público. ¿A qué esperas?
+						</p>
+						<button
+							class="text-white border-2 border-gray-300 px-10 py-3 rounded-full transition-colors"
+							>Crea tu Cuenta</button
+						>
+					</div>
+					<div class="w-1/2">
+						<img
+							src="https://guategram.com/wp-content/uploads/2023/04/young-miko-guatemala.jpg"
+							alt=""
+							class="w-100 rounded-xl"
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="py-10">
+			<div class="container py-10 mx-auto text-center">
+				<p class="font-semibold text-5xl mb-5 text-indigo-500">
+					Gracias por escuchar, ahora únete
+				</p>
+				<p class="font-thin text-xl text-gray-300 mb-5">
+					Guarda pistas, sigue a artistas y crea tus listas. Y todo,
+					gratis.
+				</p>
+				<button
+					class="text-white bg-indigo-500 px-10 py-3 rounded-full hover:bg-indigo-600 transition-colors"
+					>Crea tu Cuenta</button
+				>
+			</div>
+		</section>
+		<Footer />
+	</main>
+</Default>
